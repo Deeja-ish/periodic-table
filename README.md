@@ -1,16 +1,71 @@
-# React + Vite
+# Periodic Table App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An interactive periodic table of elements built with React and Vite. This application displays all chemical elements in a visually appealing grid layout, with detailed information available through modal popups.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Interactive Grid**: Click on any element to view detailed information including atomic number, symbol, name, atomic mass, and more
+- **Responsive Design**: Optimized for desktop and mobile viewing
+- **Fast Performance**: Built with Vite for lightning-fast development and build times
+- **Modern React**: Uses React 18 with hooks and functional components
 
-## React Compiler
+## Technologies Used
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **React 18** - UI library
+- **Vite** - Build tool and development server
+- **ESLint** - Code linting
+- **CSS** - Styling
 
-## Expanding the ESLint configuration
+## Installation
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. Clone the repository:
+   ```bash
+   git clone <repository-url>
+   cd periodic-table
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+4. Open your browser and navigate to `http://localhost:5173`
+
+## Usage
+
+- Browse the periodic table by scrolling through the grid
+- Click on any element tile to open a modal with detailed information
+- Close the modal by clicking the close button or outside the modal area
+
+## Project Structure
+
+```
+src/
+├── components/
+│   ├── ElementModal.jsx      # Modal component for element details
+│   ├── ElementTile.jsx       # Individual element tile component
+│   └── PeriodicTable.jsx     # Main periodic table grid component
+├── data/
+│   └── element.js            # Element data and configuration
+├── styles/
+│   ├── ElementModal.css      # Modal styling
+│   ├── ElementTile.css       # Element tile styling
+│   └── PeriodicTable.css     # Periodic table grid styling
+├── App.jsx                   # Main application component
+├── App.css                   # Application-wide styles
+├── index.css                 # Global styles
+└── main.jsx                  # Application entry point
+```
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+This project is open source and available under the [MIT License](LICENSE).
