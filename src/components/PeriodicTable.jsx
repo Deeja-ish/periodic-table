@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { elements } from '../data/element'
-import ElementTile from "../components/ElementTile"
-import ElementModal from "../components/ElementModal"
+import ElementTile from "./ElementTile"
+import ElementModal from "./ElementModal"
 import '../styles/PeriodicTable.css'
 
 const PeriodicTable = () => {
@@ -27,7 +27,7 @@ const PeriodicTable = () => {
                 {selectedElement && (
                     <ElementModal
                         element={selectedElement}
-                        onClick={() => { setSelectedElement(null) }}
+                        onClose={() => { setSelectedElement(null) }}
                     />
                 )}
             </div>

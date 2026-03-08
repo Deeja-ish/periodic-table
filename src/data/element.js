@@ -149,7 +149,7 @@ export const elements = [
         name: "Neon",
         period: 2,
         group: 18,
-        category: "nobel-gas",
+        category: "noble-gas",
         atomicMass: 20.18,
         molarMass: 20.18,
         electronicConfiguration: "[He] 2s² 2p⁶",
