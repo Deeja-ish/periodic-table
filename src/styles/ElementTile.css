@@ -1,0 +1,123 @@
+:root {
+    --metal: #ff6666;
+    --alikali-earth-metal: #ffdead;
+    --transition-metal: #ffc0c0;
+    --post-transition-metal: #cccccc;
+    --metalliod: #cccc99;
+    --nonmetal: #a0ffa0;
+    --halogen: #ffff99;
+    --noble-gas: #c0ffff;
+    --lanthanide: #ffbfff;
+    --actinide: #ff99cc;
+    --unknown: #e0e0e0;
+
+}
+
+/* base element style */
+.element-tile {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    /* Dimensions */
+    aspect-ratio: 1 / 1;
+    padding: 4px;
+
+    /* Design */
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #f0f0f0;
+    transition: transform 0.2s, box-shadow 0.2s;
+    user-select: none;
+    position: relative;
+
+}
+
+/* Hover Effect */
+.element-tile:hover {
+    transform: scale(1.15);
+    z-index: 10;
+    box-shadow: 0 4px 12px rgb(0, 0, 0, 0.3);
+    border-color: #333;
+
+}
+
+.atomic-number {
+    align-self: flex-start;
+    font-style: 0.75rem;
+    font-weight: bold;
+    color: #555;
+    line-height: 1;
+}
+
+.symbol {
+    font-size: 0.6rem;
+    text-align: center;
+    color: #444;
+    white-space: non-wrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+}
+
+/* These match the class names generated in your React component */
+
+.element-tile.metal {
+    background-color: var(--alkali-metal);
+}
+
+.element-tile.alkaline-earth-metal {
+    background-color: var(--alkaline-earth-metal);
+}
+
+.element-tile.transition-metal {
+    background-color: var(--transition-metal);
+}
+
+.element-tile.post-transition-metal {
+    background-color: var(--post-transition-metal);
+}
+
+.element-tile.metalloid {
+    background-color: var(--metalloid);
+}
+
+.element-tile.nonmetal {
+    background-color: var(--nonmetal);
+}
+
+.element-tile.halogen {
+    background-color: var(--halogen);
+}
+
+.element-tile.noble-gas {
+    background-color: var(--noble-gas);
+}
+
+.element-tile.lanthanide {
+    background-color: var(--lanthanide);
+}
+
+.element-tile.actinide {
+    background-color: var(--actinide);
+}
+
+.element-tile.unknown {
+    background-color: var(--unknown);
+}
+
+@media (max-width: 768px) {
+    .symbol {
+        font-size: 1rem;
+    }
+
+    .name {
+        display: none;
+    }
+
+    .atomic-number {
+        font-size: 0.6rem;
+    }
+}
